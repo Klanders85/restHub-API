@@ -1,7 +1,7 @@
 {
-  "name": "resthub",
+  "name": "bookshelf",
   "version": "1.0.0",
-  "description": "Tutorial app to learn how to build a restfulAPI",
+  "description": "API for future app about reviewing books I have read",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

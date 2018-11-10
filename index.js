@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use('/api', apiRoutes);
 
-mongoose.connect('mongodb://localhost/restHub');
+mongoose.connect('mongodb://localhost/bookshelf');
 let db = mongoose.connection;
 
 let port = process.env.port || 8080;
@@ -21,5 +21,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log("Running restHub on port:" + port);
+    console.log("Running your bookshelf on port:" + port);
 });

@@ -1,22 +1,22 @@
 const router = require('express').Router();
-const contactController = require('./contactController');
+const bookReviewController = require('./bookReviewController');
 
 router.get('/', (req, res) => {
     res.json({
         status: 'API is up and running...',
-        message: 'Welcome to restHub crafted with love!'
+        message: 'Welcome to Bookshelf crafted with love!'
     });
 });
 
 
-router.route('/contacts')
-    .get(contactController.index)
-    .post(contactController.new)
+router.route('/books')
+    .get(bookReviewController.index)
+    .post(bookReviewController.new)
 
-router.route('/contacts/:id')
-    .get(contactController.view)
-    .patch(contactController.update)
-    .put(contactController.update)
-    .delete(contactController.delete)
+router.route('/books/:id')
+    .get(bookReviewController.view)
+    .patch(bookReviewController.update)
+    .put(bookReviewController.update)
+    .delete(bookReviewController.delete)
 
 module.exports = router;
