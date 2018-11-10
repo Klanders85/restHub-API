@@ -5,11 +5,11 @@ const mongoose = require('mongoose');
 
 const app = express();
 
-app.use('/api', apiRoutes);
 app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(bodyParser.json());
+app.use('/api', apiRoutes);
 
 mongoose.connect('mongodb://localhost/restHub');
 let db = mongoose.connection;
