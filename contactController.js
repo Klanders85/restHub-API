@@ -77,13 +77,14 @@ exports.update = (req, res) => {
 };
 
 exports.delete = (req, res) => {
-    Contact.remove({ _id: req.params.contact_id }, (err, contact) => {
+    console.log(req.params.id);
+    Contact.findByIdAndRemove(req.params.id, (err) => {
         if (err) {
             res.send(err)
         } else {
             res.json({
                 status: "Success",
-                message: "Contact deleted"
+                message: "Successfully delete contact"
             })
         }
     })
